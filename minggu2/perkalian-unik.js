@@ -4,13 +4,14 @@ Diberikan sebuah function perkalianUnik(arr) yang menerima satu parameter berupa
 function perkalianUnik(arr) {
   // you can only write your code here!
   let result = [];
+  let nilai = 1;
+  
+  for(let i = 0; i < arr.length; i++) { 
+    nilai *= arr[i];
+  }
 
-  for(let i = 0; i < arr.length; i++) {
-    for(let j = 0; j < arr.length; i++) {
-      if(arr[i] !== arr[j]) {
-        result.push(arr[i] = arr[i] * arr[j]);
-      }
-    }
+  for(let j = 0; j < arr.length; j++) {
+    result.push(nilai/arr[j]);
   }
 
   return result;
