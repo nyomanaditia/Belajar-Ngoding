@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h2>My To Do List</h2>
+      <div class="add-section">
+        <input
+        id="my-input"
+        class="my-input"
+        type="text"
+        placeholder="Title..."
+        />
+        <button onclick="addTodo()" class="add-button">Add</button>
+      </div>
+      <div class="search-section">
+        <input type="search" class="my-search" id="search" placeholder="Search..." />
+        <button onclick="search()" class="search-button">Search</button>
+      </div>
+    </header>
+
+    <ul id="my-UL">
+      <li>go to School<span class="close">X</span></li>
+    </ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
