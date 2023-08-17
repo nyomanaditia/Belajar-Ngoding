@@ -8,7 +8,7 @@
 header {
   background-color: salmon;
   text-align: center;
-  padding: 30px 0;;
+  padding: 20px 0;;
 }
 
 header h2 {
@@ -16,31 +16,32 @@ header h2 {
   color: white;
 }
 
-.add-section,
-.search-section {
+.add-section {
   display: grid;
   justify-content: center;
   grid-template-columns: 40% 13%;
   margin-bottom: 2px;
 }
+.search-section {
+  width: 40%;
+  margin: 10px auto;
+}
 
 .my-input,
 .my-search,
-.add-button,
-.search-button {
+.add-button {
   border: none;
   outline: none;
   padding: .8em 1em;
+  width: 100%;
 }
 
-.add-button,
-.search-button {
+.add-button {
   cursor: pointer;
   transition: 0.2s;
 }
 
-.add-button:hover,
-.search-button:hover {
+.add-button:hover {
   background-color: #ccc;
 }
 

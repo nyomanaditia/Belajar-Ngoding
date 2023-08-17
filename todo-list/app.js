@@ -1,6 +1,5 @@
 const list = document.getElementById("my-UL");
 
-
 // untuk checklist
 list.addEventListener("click", (e) => {
   if (e.target.tagName == "LI") {
@@ -14,6 +13,25 @@ close.onclick = function () {
   let div = this.parentElement;
   div.style.display = "none";
 };
+
+//Untuk mencari todo
+function search() {
+  const search = document.querySelector("#search");
+  const lists = document.querySelectorAll("ul li");
+
+  search.addEventListener("keyup", (e) => {
+    lists.forEach((list) => {
+      let listValue = list.textContent.slice(0, -1).toLowerCase();
+      if (listValue.includes(e.target.value.toLowerCase())) {
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
+      }
+    });
+  });
+}
+
+search();
 
 //untuk menambahkan
 function addTodo() {
@@ -41,21 +59,14 @@ function addTodo() {
     let div = this.parentElement;
     div.style.display = "none";
   };
+
+  search();
 }
 
-function search() {
-  const search = document.querySelector("#search").value.toLowerCase();
-  const lists = document.querySelectorAll("ul li");
-
-  lists.forEach((list) => {
-    if (!list.firstChild.nodeValue.toLowerCase().includes(search)) {
-      list.style.display = "none";
-    } else {
-      list.style.display = "block";
-    }
-  });
-}
-
-
-
-
+// menambahkan todo dengan tombol Enter
+const input = document.getElementById("my-input");
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    addTodo();
+  }
+});
